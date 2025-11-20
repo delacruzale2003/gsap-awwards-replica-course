@@ -32,12 +32,12 @@ const MessageSection = () => {
         gsap.to(secMsgSplit.words, {
         color: "#faeade",
         ease: "power1.in",
-        stagger: 0.5,
+        stagger: 1,
         scrollTrigger: {
             trigger: ".second-message",
             start: "top center",
             end: "bottom center",
-            
+            scrub: true,
         },
         });
         const revealTl = gsap.timeline({
@@ -57,9 +57,9 @@ const MessageSection = () => {
 
         const paragraphTl = gsap.timeline({
             scrollTrigger: {
-                trigger: "messge-content p",
+                trigger: "message-content p",
                 start: "top center",
-                markers: true,
+                
             }
         })
 
@@ -81,10 +81,10 @@ const MessageSection = () => {
 
                         
                             <div style={{
-                                clipPath: "polygon(0 1%, 0 0, 0 100%, 0 100%)"
+                                clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
                                 }} className="msg-text-scroll">
                                 <div className="bg-light-brown md:pb-5 pb-3 px-5">
-                                    Fuel Up
+                                    <h2>Fuel Up</h2>
                                 </div>
                             </div>
 
